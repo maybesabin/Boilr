@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const Steps = () => {
     const { activeIndex, setActiveIndex } = useTimelineContext();
     return (
-        <div className="w-1/3 p-6">
+        <div className="md:w-1/3 w-full">
             {activeIndex == 0 ? <Step1 /> :
                 activeIndex == 1 ? <Step2 /> :
                     activeIndex == 2 ? <Step3 /> :

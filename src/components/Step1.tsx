@@ -35,7 +35,7 @@ const Step1 = () => {
                     name="project-name"
                 />
             </div>
-            <h3 className="md:text-sm textxs dark:text-neutral-200 text-neutral-700">
+            <h3 className="md:text-sm text-xs dark:text-neutral-200 text-neutral-700">
                 {description.length}/200 characters
             </h3>
         </div>

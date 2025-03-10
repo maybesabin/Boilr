@@ -21,13 +21,13 @@ const Timeline = () => {
                         <div className="flex items-center">
                             <div
                                 className={`${activeIndex == 1 || activeIndex == 2 ? "bg-yellow-400" : "bg-gray-300 dark:bg-gray-500"} md:h-10 md:w-10 h-8 w-8 rounded-full flex items-center justify-center`}>
-                                <div className="bg-white md:w-4 h-3 w-3 rounded-full"></div>
+                                <div className="bg-white md:w-4 md:h-4 h-3 w-3 rounded-full"></div>
                             </div>
                             <div className={`md:w-56 w-20 h-1 ${activeIndex == 2 ? "bg-yellow-400" : "bg-gray-300 dark:bg-gray-400"}`}></div>
                         </div>
                         <div
                             className={`${activeIndex == 2 ? "bg-yellow-400" : "dark:bg-gray-500 bg-gray-300"} md:h-10 md:w-10 h-8 w-8 mr-10 rounded-full flex items-center justify-center`}>
-                            <div className="bg-white md:w-4 h-3 w-3 rounded-full"></div>
+                            <div className="bg-white md:w-4 md:h-4 h-3 w-3 rounded-full"></div>
                         </div>
                     </div>
 

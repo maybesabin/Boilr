@@ -4,15 +4,31 @@ import Step3 from "@/components/Step3";
 import { Button } from "@/components/ui/button";
 import { useTimelineContext } from "@/context/timeline-context"
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { SetStateAction } from "react";
 
-const Steps = () => {
+const Steps = ({
+    capitalize,
+    setCapitalize
+}: {
+    capitalize: boolean;
+    setCapitalize: React.Dispatch<SetStateAction<boolean>>
+}) => {
     const { activeIndex, setActiveIndex } = useTimelineContext();
     return (
         <div className="md:w-1/3 w-full">
-            {activeIndex == 0 ? <Step1 /> :
-                activeIndex == 1 ? <Step2 /> :
-                    activeIndex == 2 ? <Step3 /> :
-                        <Step1 />
+            {activeIndex == 0 ? <Step1
+                capitalize={capitalize}
+                setCapitalize={setCapitalize}
+            />
+                :
+                activeIndex == 1 ? <Step2 />
+                    :
+                    activeIndex == 2 ? <Step3 />
+                        :
+                        <Step1
+                            capitalize={capitalize}
+                            setCapitalize={setCapitalize}
+                        />
             }
 
             {/* Next/Previous */}

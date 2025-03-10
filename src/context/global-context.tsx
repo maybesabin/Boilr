@@ -4,13 +4,13 @@ interface GlobalProps {
     title: string;
     name: string;
     description: string;
-    borderRadius: string;
+    borderRadius: number;
     fontFamily: string;
     primaryColor: string;
     setName: React.Dispatch<SetStateAction<string>>;
     setTitle: React.Dispatch<SetStateAction<string>>;
     setDescription: React.Dispatch<SetStateAction<string>>;
-    setBorderRadius: React.Dispatch<SetStateAction<string>>;
+    setBorderRadius: React.Dispatch<SetStateAction<number>>;
     setFontFamily: React.Dispatch<SetStateAction<string>>;
     setPrimaryColor: React.Dispatch<SetStateAction<string>>;
 }
@@ -23,9 +23,9 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
     const [title, setTitle] = useState("");
     const [name, setName] = useState("");
     const [description, setDescription] = useState("")
-    const [borderRadius, setBorderRadius] = useState("")
+    const [borderRadius, setBorderRadius] = useState(8)
     const [fontFamily, setFontFamily] = useState("");
-    const [primaryColor, setPrimaryColor] = useState("")
+    const [primaryColor, setPrimaryColor] = useState("#fdc700")
     return (
         <GlobalContext.Provider value={{
             name, setName,

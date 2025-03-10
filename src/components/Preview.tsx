@@ -6,12 +6,14 @@ const Preview = ({
 }: {
     capitalize: boolean;
 }) => {
-    const { name, title, description } = useGlobalContext();
+    const { name, title, description, borderRadius, primaryColor } = useGlobalContext();
     return (
         <div className="md:w-2/3 w-full border rounded-lg md:p-6 p-4">
             <div className="w-full flex gap-4 items-center justify-between">
                 <div className="flex items-center gap-2">
-                    <div className="bg-yellow-400 flex justify-center items-center md:w-10 md:h-10 w-10 h-10 rounded-lg">
+                    <div
+                        style={{ borderRadius: `${borderRadius}px`, backgroundColor: primaryColor }}
+                        className="flex justify-center items-center md:w-10 md:h-10 w-10 h-10">
                         <Zap color="black" />
                     </div>
                     <h1 className="font-bold md:text-3xl text-base">
@@ -21,7 +23,8 @@ const Preview = ({
                     </h1>
                 </div>
                 <button
-                    className="px-4 py-2.5 md:text-base text-sm font-semibold text-black bg-yellow-400 hover:bg-yellow-300 transition-all rounded-lg cursor-pointer"
+                    style={{ borderRadius: `${borderRadius}px`, backgroundColor: primaryColor }}
+                    className="px-4 py-2.5 md:text-base text-sm font-semibold text-black cursor-pointer"
                 >
                     Dashboard
                 </button>
@@ -43,7 +46,8 @@ const Preview = ({
                     }
                 </p>
                 <button
-                    className="px-4 py-2.5 md:text-base text-sm font-semibold text-black bg-yellow-400 hover:bg-yellow-300 transition-all rounded-lg cursor-pointer"
+                    style={{ borderRadius: `${borderRadius}px`, backgroundColor: primaryColor }}
+                    className="px-4 py-2.5 md:text-base text-sm font-semibold text-black cursor-pointer"
                 >
                     Explore Now
                 </button>

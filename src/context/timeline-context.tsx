@@ -10,7 +10,7 @@ const TimelineContext = createContext<TimelineProps | undefined>(undefined);
 
 //create provider
 export const TimelineProvider = ({ children }: { children: React.ReactNode }) => {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(2);
     return (
         <TimelineContext.Provider value={{ activeIndex, setActiveIndex }}>
             {children}
